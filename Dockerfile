@@ -12,7 +12,7 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 # Copy the built React app into the static resources directory of Spring Boot
-COPY --from=build-frontend /app/frontend/dist /app/src/main/resources/static
+COPY --from=build-frontend /app/src/main/resources/static /app/src/main/resources/static
 RUN mvn clean package -DskipTests
 
 # Stage 3: Provide Runtime Environment
