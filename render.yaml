@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: topcart-ecommerce
+    env: docker
+    plan: free
+    branch: main
+    envVars:
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: VITE_API_URL
+        sync: false # Set as your actual render URL e.g. https://topcart-ecommerce.onrender.com

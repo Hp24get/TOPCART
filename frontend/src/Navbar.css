@@ -1,0 +1,279 @@
+.navbar {
+    background: rgba(0, 0, 0, 0.2);
+    /* Dark Glass */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    /* Glass Effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    position: relative;
+    /* Needed for absolute positioning of logo */
+}
+
+.navbar-logo {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* Removed absolute centering */
+    margin-right: 20px;
+    /* Spacing from links */
+}
+
+.navbar-logo-img {
+    height: 100px;
+    /* Increased from 80px visual (though previously 120, it was centered). Let's try 100px and let it overflow if needed or resize navbar */
+    width: auto;
+    object-fit: contain;
+    max-width: 250px;
+    /* Allowed to be wider */
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo-img:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* Center the pill vertically */
+}
+
+.nav-links {
+    color: #e0f7fa;
+    /* Ice White */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 25px;
+    /* Pill dimensions */
+    height: auto;
+    /* Allow pill shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    /* Cylindrical/Pill Shape */
+    margin: 0 5px;
+}
+
+.nav-links:hover {
+    background-color: rgba(0, 210, 255, 0.15);
+    /* Neon Blue Glass */
+    color: #00d2ff;
+    /* Neon Blue Text */
+    transform: scale(1.05);
+    /* Subtle pop */
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+    /* Neon Glow */
+}
+
+.nav-links.active {
+    /* No permanent background as per user request */
+    font-weight: bold;
+    /* Keep bold to indicate active state */
+    /* Optional: underline or different text color if needed, currently keeping minimal */
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Organized spacing */
+    color: white;
+    font-size: 1rem;
+    /* Reduced from 1.2rem */
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    /* Push to right */
+    margin-right: 20px;
+    /* "Organise in the left slightly" - pull away from edge */
+}
+
+.nav-icon-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon-link:visited {
+    color: white;
+}
+
+.icon {
+    padding: 8px;
+    /* Reduced from 10px */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    background-color: rgba(0, 210, 255, 0.2);
+    /* Neon Blue Glass */
+    color: #00d2ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    /* Neon Glow */
+}
+
+/* Search Bar Styles */
+.search-form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(0, 210, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 0.95rem;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.search-btn .icon {
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.search-btn:hover .icon {
+    background: transparent;
+    color: #00d2ff;
+    box-shadow: none;
+    transform: scale(1.1);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* Search Results Dropdown */
+.search-results-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark Glass */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: rgba(0, 210, 255, 0.15);
+    /* Neon Blue Highlight */
+}
+
+.search-result-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.search-result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-result-name {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.search-result-price {
+    color: #00d2ff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}

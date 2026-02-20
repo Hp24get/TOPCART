@@ -1,0 +1,385 @@
+.admin-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #e0f7fa;
+}
+
+/* Admin Header & Tabs */
+.admin-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beta-badge {
+    font-size: 0.8rem;
+    background: linear-gradient(45deg, #ff007a, #ff5e00);
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: rgba(0, 210, 255, 0.2);
+    color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+}
+
+.tab-btn:hover:not(.active) {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Glass Panel for Content */
+.glass-panel {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    overflow-x: auto;
+}
+
+/* Admin Tables */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 15px;
+    color: #b0bec5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.admin-table tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.table-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.fw-bold {
+    font-weight: 600;
+}
+
+.mono-text {
+    font-family: monospace;
+    color: #aaa;
+}
+
+.highlight-text {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* Badges */
+.badge-category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-badge.pending {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.status-badge.shipped {
+    background: rgba(0, 210, 255, 0.2);
+    color: #00d2ff;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.status-badge.delivered {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.role-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.role-badge.admin {
+    background: #ff007a;
+    color: white;
+}
+
+.role-badge.user {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Stock Status */
+.stock-status {
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.stock-status.in {
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.stock-status.out {
+    color: #ff3d3d;
+    background: rgba(255, 61, 61, 0.1);
+}
+
+/* Buttons */
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.2);
+}
+
+.icon-btn.edit {
+    color: #00d2ff;
+}
+
+.icon-btn.delete {
+    color: #ff3d3d;
+}
+
+.add-btn {
+    background: linear-gradient(135deg, #00d2ff, #007aff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.glass-modal {
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 600px;
+    max-width: 90%;
+    color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #00d2ff;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #b2ebf2;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #b2ebf2;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00d2ff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* File Upload Styling */
+.image-upload-group input[type="file"] {
+    display: none;
+}
+
+.upload-box {
+    border: 2px dashed rgba(0, 210, 255, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: rgba(0, 210, 255, 0.05);
+}
+
+.upload-box:hover {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: #00d2ff;
+}
+
+.upload-label {
+    cursor: pointer;
+    color: #00d2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.hint {
+    display: block;
+    margin-top: 5px;
+    color: #80deea;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00d2ff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #33dcff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+.submit-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+}

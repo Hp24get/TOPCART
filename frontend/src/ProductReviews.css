@@ -1,0 +1,135 @@
+/* Added below exiting styles in ProductDetails.css */
+
+.reviews-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reviews-section h2 {
+    color: #00d2ff;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #e0f7fa;
+    font-size: 1.1rem;
+}
+
+.review-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.review-comment {
+    color: #e0f7fa;
+    line-height: 1.6;
+}
+
+.write-review-section {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.write-review-section h3 {
+    color: #00d2ff;
+    margin-bottom: 1.5rem;
+}
+
+.review-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0f7fa;
+}
+
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.review-form select:focus,
+.review-form textarea:focus {
+    outline: none;
+    border-color: #00d2ff;
+    box-shadow: 0 0 5px rgba(0, 210, 255, 0.3);
+}
+
+.submit-review-btn {
+    background: #00d2ff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-review-btn:hover:not(:disabled) {
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.submit-review-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.no-reviews {
+    color: #aaa;
+    font-style: italic;
+}
+
+.login-prompt {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.text-link {
+    background: none;
+    border: none;
+    color: #00d2ff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+}

@@ -1,0 +1,170 @@
+.hero-container {
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.hero-slide {
+    height: 60vh;
+    width: 100%;
+    display: flex !important;
+    /* Slick overrides flex, so we force it for alignment */
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* Slide Backgrounds */
+.slide-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    z-index: 10;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-btn {
+    padding: 12px 36px;
+    font-size: 1.2rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    color: #3498db;
+    transform: scale(1.05);
+}
+
+/* Slick Dots Customization */
+.slick-dots li button:before {
+    color: white !important;
+    font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #3498db !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glassy Slider Navigation */
+.slick-prev,
+.slick-next {
+    width: 60px !important;
+    height: 60px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    /* Darker, more subtle glass */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    z-index: 20 !important;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    /* Bouncy transition */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 28px !important;
+    color: #00d2ff !important;
+    /* Neon Blue - Theme Color */
+    opacity: 0.8 !important;
+    line-height: 1 !important;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    /* Neon Glow */
+    transition: all 0.3s ease;
+}
+
+.slick-prev {
+    left: 30px !important;
+}
+
+.slick-next {
+    right: 30px !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(0, 210, 255, 0.5) !important;
+    /* Neon Border on Hover */
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4) !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: #fff !important;
+    /* White on hover */
+    opacity: 1 !important;
+}
+
+.hero-container:hover .slick-prev,
+.hero-container:hover .slick-next {
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}

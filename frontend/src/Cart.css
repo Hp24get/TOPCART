@@ -1,0 +1,244 @@
+.cart-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.empty-cart-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.continue-shopping-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cart-items {
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px); */
+}
+
+.cart-item-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details h3 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-actions button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-actions button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.remove-btn {
+    width: auto !important;
+    padding: 0 10px;
+    font-size: 0.9rem !important;
+    background: rgba(231, 76, 60, 0.2) !important;
+    color: #e74c3c !important;
+}
+
+.remove-btn:hover {
+    background: rgba(231, 76, 60, 0.4) !important;
+}
+
+.cart-summary {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.cart-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.clear-cart-btn {
+    background: transparent;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-btn {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Checkout Form Styles */
+.checkout-form-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 20px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1rem;
+}
+
+.checkout-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.back-btn-small {
+    background: transparent;
+    border: 1px solid #aaa;
+    color: #aaa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.place-order-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.place-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Payment Form Enhancements */
+.payment-form {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.payment-error-alert {
+    background: rgba(255, 77, 77, 0.2);
+    color: #ff4d4d;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ff4d4d;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.half-width {
+    flex: 1;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.processing {
+    background: #7f8c8d;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.hint-text {
+    color: #bdc3c7;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
