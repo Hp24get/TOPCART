@@ -24,10 +24,14 @@ public class SecurityConfig {
                 }))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll() // Explicitly open auth routes
-                        .requestMatchers("/api/**").permitAll() // Keep other APIs open for now
-                        .requestMatchers("/error").permitAll() // Allow internal error forwards
-                        .anyRequest().authenticated());
+                        .requestMatchers("/", "/index.html", "/static/**", "/assets/**", "/*.js", "/*.css", "/*.png",
+                                "/*.ico", "/*.svg")
+                        .permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/**").permitAll()
+                        .requestMatchers("/error").permitAll()
+                        .anyRequest().permitAll()); // Permit all for now to ensure React Router paths work, or use a
+                                                    // better pattern later
         return http.build();
     }
 }
