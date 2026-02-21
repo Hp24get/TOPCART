@@ -103,7 +103,35 @@ const ProductList = ({ category }) => {
         return sorted;
     };
 
-    if (loading) return <div className="loading">Loading products...</div>;
+    if (loading) {
+        return (
+            <div className="product-list-container">
+                <div className="product-header">
+                    <h1 className="page-title desktop-title">Loading Products...</h1>
+                </div>
+                <div className="product-layout">
+                    <aside className="filters-sidebar">
+                        <div className="skeleton-card" style={{ height: '300px' }}>
+                            <div className="shimmer-wrapper"></div>
+                        </div>
+                    </aside>
+                    <div className="product-main-content">
+                        <div className="product-skeleton-grid">
+                            {[1, 2, 3, 4, 5, 6].map(i => (
+                                <div key={i} className="skeleton-card">
+                                    <div className="skeleton-image"></div>
+                                    <div className="skeleton-text"></div>
+                                    <div className="skeleton-text short"></div>
+                                    <div className="skeleton-text price"></div>
+                                    <div className="shimmer-wrapper"></div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
     if (error) return <div className="error">{error}</div>;
 
     const displayedProducts = getSortedProducts();
